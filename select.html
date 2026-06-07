@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Order Page</h2>
+
+<div id="message"></div>
+
+<div id="orderBox" style="display:none;">
+    <img id="img" width="200">
+    <h3 id="name"></h3>
+    <p id="price"></p>
+
+    <a id="whatsapp" target="_blank">
+        <button>Buy Now on WhatsApp</button>
+    </a>
+
+    <br><br>
+    <button onclick="clearOrder()">Clear Order</button>
+</div>
+
+<script>
+// get data
+let name = localStorage.getItem("name");
+let price = localStorage.getItem("price");
+let img = localStorage.getItem("img");
+
+let message = document.getElementById("message");
+let orderBox = document.getElementById("orderBox");
+
+if(!name || !price || !img){
+
+    message.innerHTML = "<h3 style='color:red;'>❌ No product selected!</h3>";
+
+} else {
+
+    orderBox.style.display = "block";
+
+    document.getElementById("name").innerText = name;
+    document.getElementById("price").innerText = "Rs. " + price;
+    document.getElementById("img").src = img;
+
+    let phone = "94755802798"; 
+
+    document.getElementById("whatsapp").href =
+        "https://wa.me/" + phone +
+        "?text=Hi, I want to buy " + name + " for Rs." + price;
+}
+
+
+function clearOrder(){
+    localStorage.removeItem("name");
+    localStorage.removeItem("price");
+    localStorage.removeItem("img");
+
+    location.reload();
+}
+</script>
+
+</body>
+</html>
