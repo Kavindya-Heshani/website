@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Order Now</h1>
+
+<div class="gallery">
+
+    <div class="card">
+        <img src="bag1.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag1.jpeg')">SELECT</button>
+    </div>
+
+    <div class="card">
+        <img src="bag2.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag2.jpeg')">SELECT</button>
+    </div>
+
+    <div class="card">
+        <img src="bag3.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag4.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag5.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag6.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag7.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag8.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+    <div class="card">
+        <img src="bag9.jpeg">
+        <h3>Hand made Bag</h3>
+        <p>Rs. 800</p>
+        <button onclick="selectItem('Hand made Bag','800','bag3.jpeg')">SELECT</button>
+    </div>
+
+</div>
+
+<script>
+function selectItem(name, price, img){
+    // save product data
+    localStorage.setItem("name", name);
+    localStorage.setItem("price", price);
+    localStorage.setItem("img", img);
+
+    // go to select page
+    window.location.href = "select.html";
+}
+</script>
+
+</body>
+</html>
