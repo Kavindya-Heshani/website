@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <a href="index.html"><img src="logo.jpeg"></a> 
+               <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMnu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="image.html">ITEMS</a></li>
+   
+                </ul>
+               </div>
+               <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <h1>Welcome to Art of Dream Creation</h1>
+                <p>Discover stylish handmade bags crafted with passion and creativity. 
+                    Each bag is uniquely designed to combine elegance, durability, and comfort in one. 
+                    Suitable for both children and adults, our bags are made to fit every lifestyle with a modern
+                     handmade touch.</p>
+            </div>
+             
+        </header>
+        <script>
+            var navLinks=document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+                
+            }
+        </script>
+    </body>
+</html>
